@@ -9,22 +9,20 @@
 
 import random
 
-
-for num in range(1):
-    random.randint(1,101)
-
+numsecreto = random.randint(1,101)
 numero1= 0
 contador=0
 numero1 = int(input("Dime un número:"))
-while numero1!=num or contador<10:
-    numero1 = int(input("Dime un número:"))
-    if numero1>num:
+while numero1!=numsecreto and contador<10:
+    if numero1>numsecreto:
         print("El número secreto es menor")
     else:
         print("El número secreto es mayor")
-contador +=1
+    contador +=1
+    numero1 = int(input("Dime un número:"))
+    print("Te quedan", 9-contador, "intentos")
 
-if numero1==num:
+if numero1==numsecreto:
     print("Enhorabuena, lo has adivinado en", contador, "intentos")
 else:
-    print("El número generado era", num)
+    print("El número generado era", numsecreto)
