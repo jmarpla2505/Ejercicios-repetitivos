@@ -4,8 +4,8 @@
 caracter = ""
 
 while caracter!=" ":
-    caracter = input("Dime un caracter:")
-    if caracter=="a" or "A" or "e" or "E" or "i" or "I" or "o" or "O" or "u" or "U":
+    caracter = input("Dime un caracter:").upper()
+    if (caracter=="a" or caracter=="e" or caracter=="E" or caracter=="i" or caracter=="I" or caracter=="o" or caracter=="O" or caracter=="u" or caracter=="U"):
         print("Es una vocal")
     else:
         print("No es vocal")
