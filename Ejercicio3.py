@@ -1,16 +1,13 @@
 #Algoritmo que pida números hasta que se introduzca un cero. Debe imprimir la
 #suma y la media de todos los números introducidos.
 
-num=1
-media = 0
-vDatos = []
-contador=0
-while num!=0:
-    num = int(input("Dime un número:"))
-    if (num!=0):
-        vDatos.append(num)
-    contador += 1
+numero = (int)(input("Dime un número:"))
+suma = 0
+contador = 0
+while numero != 0:
+    suma = suma + numero
+    contador = contador + 1
+    numero = (int)(input("Dime otro número o pulsa 0 para salir:\n"))
 
-for numero in vDatos:
-    print("La media es", (numero*contador)/contador)
-    print("La suma es", numero*(contador-1))
+print("La suma de los números es:", suma)
+print("La media de los números es:", suma/contador)
