@@ -7,21 +7,23 @@
 # He informa si hemos introducido algún número igual a los límites del intervalo.
 
 lista = []
-limiteinferior = int(input("Dime el límite inferior:"))
-limitesuperior = int(input("Dime el límite superior:"))
 sumaintervalo = []
 fueraintervalo = []
 num = 1
 igualintervalo = []
-contador1 = 0
-contador2 = 0
-contador3 = 0
-if limiteinferior<limitesuperior:
+lista.append(sumaintervalo)
+lista.append(fueraintervalo)
+lista.append(igualintervalo)
+suma= 0
+try:
+    limiteinferior = int(input("Dime el límite inferior:"))
+    limitesuperior = int(input("Dime el límite superior:"))
+    if limiteinferior<limitesuperior:
          while num!= 0:
             num = int(input("Dime un número:"))
             if limiteinferior<num<limitesuperior:
                 sumaintervalo.append(num)
-                contador1 = 0
+                
             elif num>limitesuperior or num<limiteinferior:
                 fueraintervalo.append(num)
                 
@@ -30,25 +32,34 @@ if limiteinferior<limitesuperior:
                 
 
 
-else:
-    print("El límite inferior tiene que ser menor que el límite superior")
+    else:
+        print("El límite inferior tiene que ser menor que el límite superior")
     limiteinferior = int(input("Dime el límite inferior:"))
     limitesuperior = int(input("Dime el límite superior:"))
     while num!= 0:
             num = int(input("Dime un número:"))
             if limiteinferior<num<limitesuperior:
                 sumaintervalo.append(num)
-                contador1 = 0
+                
             elif num>limitesuperior or num<limiteinferior:
                 fueraintervalo.append(num)
                 
             else:
                 igualintervalo.append(num)
+except:
+    print("Tienes que introducir números")
 
 
-print("La suma de los número del intervalo es", sumaintervalo)
+for lista in sumaintervalo:
+    suma += lista
+
+
+
+
+
+print("La suma de los número del intervalo es", suma)
 print("Números que están fuera del intervalo:", fueraintervalo)
-print("Números introducidos iguales a los intervalos:", igualintervalo*contador3)
+print("Números introducidos iguales a los intervalos:", igualintervalo)
 
 
 
