@@ -4,10 +4,10 @@
 
 vAhorros = []
 suma = 0
-for n in range(1,13):
-    num = int(input("Dime cuanto ha ahorrado en el mes", n))
+ahorroaño = 0
+for i in range(1,13):
+    num = int(input("Dime cuanto ha ahorrado este mes:"))
     vAhorros.append(num)
+    ahorroaño = num + ahorroaño
 
-print("En todo el año ha ahorrado")
-for vAhorros in num:
-    suma += vAhorros
+print("En todo el año ha ahorrado", ahorroaño)
